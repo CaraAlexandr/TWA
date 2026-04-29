@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  background: #f5f7fb;
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background: #ffffff;
+  border-bottom: 1px solid #edf0f5;
+  padding: 0 32px;
+}
+
+.brand {
+  min-width: 220px;
+}
+
+.brand-icon {
+  color: #1677ff;
+  font-size: 26px;
+}
+
+.brand-title {
+  margin: 0 !important;
+}
+
+.header-menu {
+  flex: 1;
+  min-width: 0;
+  border-bottom: none;
+}
+
+.app-content {
+  width: min(1180px, calc(100% - 32px));
+  margin: 32px auto;
+}
+
+.app-footer {
+  text-align: center;
+  color: #667085;
+  background: transparent;
+}
+
+.page-stack {
+  width: 100%;
+}
+
+.hero-card {
+  background: linear-gradient(135deg, #eaf3ff 0%, #ffffff 70%);
+  border: 1px solid #d9eaff;
+}
+
+.toolbar {
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  max-width: 360px;
+}
+
+.section-alert {
+  margin-bottom: 16px;
+}
+
+.note-title-link {
+  font-weight: 600;
+}
+
+.note-preview {
+  max-width: 360px;
+}
+
+.details-heading {
+  width: 100%;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.note-content {
+  white-space: pre-wrap;
+  font-size: 16px;
+}
+
+.form-card {
+  max-width: 840px;
+}
+
+.centered-state {
+  display: grid;
+  min-height: 360px;
+  place-items: center;
+}
+
+@media (max-width: 720px) {
+  .app-header {
+    height: auto;
+    flex-wrap: wrap;
+    padding: 16px;
+  }
+
+  .brand {
+    min-width: 100%;
+  }
+
+  .app-content {
+    margin: 20px auto;
+  }
+}
