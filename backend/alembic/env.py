@@ -5,7 +5,7 @@ from sqlalchemy import engine_from_config, pool
 
 from app.core.config import get_settings
 from app.database import Base
-from app.models import Note  # noqa: F401 - imported so Alembic sees the model metadata
+from app.models import Note, User  # noqa: F401 - imported so Alembic sees the model metadata
 
 
 config = context.config

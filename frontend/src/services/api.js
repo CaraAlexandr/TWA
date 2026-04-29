@@ -7,6 +7,30 @@ const api = axios.create({
   },
 });
 
+api.interceptors.request.use((config) => {
+  const token = localStorage.getItem('smart_notes_token');
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
+  return config;
+});
+
+export const setAuthToken = (token) => {
+  if (token) {
+    localStorage.setItem('smart_notes_token', token);
+  } else {
+    localStorage.removeItem('smart_notes_token');
+  }
+};
+
+export const getAuthToken = () => localStorage.getItem('smart_notes_token');
+
+export const register = (payload) => api.post('/auth/register', payload).then((response) => response.data);
+
+export const login = (payload) => api.post('/auth/login', payload).then((response) => response.data);
+
+export const getMe = () => api.get('/auth/me').then((response) => response.data);
+
 export const getNotes = (params = {}) => api.get('/notes', { params }).then((response) => response.data);
 
 export const getNoteById = (id) => api.get(`/notes/${id}`).then((response) => response.data);

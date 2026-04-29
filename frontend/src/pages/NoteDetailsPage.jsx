@@ -63,7 +63,7 @@ function NoteDetailsPage() {
   }
 
   return (
-    <Card>
+    <Card className="content-card details-card">
       <Space direction="vertical" size="large" className="page-stack">
         <Space className="details-heading" wrap>
           <div>

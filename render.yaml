@@ -18,6 +18,10 @@ services:
           property: connectionString
       - key: ENVIRONMENT
         value: production
+      - key: SECRET_KEY
+        generateValue: true
+      - key: ACCESS_TOKEN_EXPIRE_MINUTES
+        value: 1440
       - key: FRONTEND_URL
         value: https://smart-notes-frontend.onrender.com
       - key: CORS_ORIGINS

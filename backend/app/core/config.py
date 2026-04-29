@@ -18,6 +18,9 @@ class Settings(BaseSettings):
     database_url: str = Field(..., alias="DATABASE_URL")
     frontend_url: str = Field("http://localhost:5173", alias="FRONTEND_URL")
     cors_origins: str = Field("", alias="CORS_ORIGINS")
+    secret_key: str = Field("change-this-local-secret", alias="SECRET_KEY")
+    access_token_expire_minutes: int = Field(60 * 24, alias="ACCESS_TOKEN_EXPIRE_MINUTES")
+    jwt_algorithm: str = Field("HS256", alias="JWT_ALGORITHM")
 
     model_config = SettingsConfigDict(
         env_file=".env",

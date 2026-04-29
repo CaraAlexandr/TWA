@@ -20,7 +20,7 @@ function NoteForm({ initialValues, loading, submitting, onSubmit }) {
   }, [form, initialValues]);
 
   return (
-    <Card loading={loading} className="form-card">
+    <Card loading={loading} className="form-card content-card">
       <Form form={form} layout="vertical" onFinish={onSubmit} requiredMark="optional">
         <Form.Item
           label="Title"

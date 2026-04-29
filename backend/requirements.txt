@@ -1,5 +1,8 @@
 alembic
+email-validator
 fastapi
+pwdlib[argon2]
+PyJWT
 psycopg[binary]
 pydantic-settings
 python-dotenv

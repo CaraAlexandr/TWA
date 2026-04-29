@@ -79,15 +79,17 @@ function NotesTable({ notes, loading, onDelete, onTogglePin, onToggleArchive }) 
   ];
 
   return (
-    <Table
-      rowKey="id"
-      columns={columns}
-      dataSource={notes}
-      loading={loading}
-      locale={{ emptyText: <Empty description="No notes found" /> }}
-      pagination={{ pageSize: 8, showSizeChanger: false }}
-      scroll={{ x: 960 }}
-    />
+    <div className="table-shell">
+      <Table
+        rowKey="id"
+        columns={columns}
+        dataSource={notes}
+        loading={loading}
+        locale={{ emptyText: <Empty description="No notes found" /> }}
+        pagination={{ pageSize: 8, showSizeChanger: false }}
+        scroll={{ x: 960 }}
+      />
+    </div>
   );
 }
 

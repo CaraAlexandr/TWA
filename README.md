@@ -2,7 +2,7 @@
 
 Smart Notes este o aplicație full-stack de tip CRUD pentru administrarea notițelor. Backend-ul este construit cu Python, FastAPI, SQLAlchemy 2.x, Alembic și PostgreSQL, iar frontend-ul folosește React, Vite, React Router, Axios și Ant Design.
 
-Aplicația permite listarea, crearea, vizualizarea, editarea, ștergerea, căutarea, pin/unpin și arhivarea notițelor.
+Aplicația permite autentificare cu JWT, listarea, crearea, vizualizarea, editarea, ștergerea, căutarea, pin/unpin și arhivarea notițelor. Fiecare utilizator vede doar notițele proprii.
 
 ## Stack Tehnologic
 
@@ -65,6 +65,9 @@ DATABASE_URL=postgresql+psycopg://smart_notes:smart_notes_password@localhost:543
 FRONTEND_URL=http://localhost:5173
 CORS_ORIGINS=http://localhost:5173
 ENVIRONMENT=development
+SECRET_KEY=change-this-in-production
+ACCESS_TOKEN_EXPIRE_MINUTES=1440
+JWT_ALGORITHM=HS256
 ```
 
 Frontend (`frontend/.env`):
@@ -164,6 +167,9 @@ alembic upgrade head
 ## Endpoint-uri API
 
 - `GET /health`
+- `POST /api/auth/register`
+- `POST /api/auth/login`
+- `GET /api/auth/me`
 - `GET /api/notes`
 - `GET /api/notes/{id}`
 - `POST /api/notes`
@@ -199,6 +205,8 @@ Endpoint-ul `GET /api/notes` acceptă parametrii opționali `search`, `tag` și 
 ```env
 DATABASE_URL=<Internal Database URL din Render PostgreSQL>
 ENVIRONMENT=production
+SECRET_KEY=<generează o valoare lungă și secretă>
+ACCESS_TOKEN_EXPIRE_MINUTES=1440
 FRONTEND_URL=https://smart-notes-frontend.onrender.com
 CORS_ORIGINS=https://smart-notes-frontend.onrender.com
 ```

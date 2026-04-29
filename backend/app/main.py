@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.core.config import get_settings
-from app.routes import notes
+from app.routes import auth, notes
 
 
 settings = get_settings()
@@ -28,3 +28,4 @@ def health_check():
 
 
 app.include_router(notes.router, prefix="/api")
+app.include_router(auth.router, prefix="/api")
