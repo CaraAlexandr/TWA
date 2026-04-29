@@ -5,6 +5,7 @@
 Smart Notes este o aplicație web full-stack pentru administrarea notițelor personale. Proiectul implementează operații CRUD complete folosind FastAPI pentru backend, PostgreSQL pentru persistarea datelor și React cu Ant Design pentru interfața utilizator.
 
 Link-ul public al aplicației este: [https://frontend-fba3.onrender.com](https://frontend-fba3.onrender.com).
+Documentația Swagger pentru backend este disponibilă la: [https://twa-pi1n.onrender.com/docs](https://twa-pi1n.onrender.com/docs).
 
 ## 2. Introducere
 

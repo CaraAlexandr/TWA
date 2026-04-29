@@ -7,6 +7,7 @@ Aplicația permite autentificare cu JWT, listarea, crearea, vizualizarea, editar
 ## Link Aplicație Live
 
 - Frontend (Render): [https://frontend-fba3.onrender.com](https://frontend-fba3.onrender.com)
+- Swagger API Docs: [https://twa-pi1n.onrender.com/docs](https://twa-pi1n.onrender.com/docs)
 
 ## Stack Tehnologic
 
