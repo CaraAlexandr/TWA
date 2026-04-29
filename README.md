@@ -4,6 +4,10 @@ Smart Notes este o aplicație full-stack de tip CRUD pentru administrarea notiț
 
 Aplicația permite autentificare cu JWT, listarea, crearea, vizualizarea, editarea, ștergerea, căutarea, pin/unpin și arhivarea notițelor. Fiecare utilizator vede doar notițele proprii.
 
+## Link Aplicație Live
+
+- Frontend (Render): [https://frontend-fba3.onrender.com](https://frontend-fba3.onrender.com)
+
 ## Stack Tehnologic
 
 - Backend: Python 3.12, FastAPI, SQLAlchemy 2.x, Alembic, Pydantic Settings, Uvicorn

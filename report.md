@@ -4,6 +4,8 @@
 
 Smart Notes este o aplicație web full-stack pentru administrarea notițelor personale. Proiectul implementează operații CRUD complete folosind FastAPI pentru backend, PostgreSQL pentru persistarea datelor și React cu Ant Design pentru interfața utilizator.
 
+Link-ul public al aplicației este: [https://frontend-fba3.onrender.com](https://frontend-fba3.onrender.com).
+
 ## 2. Introducere
 
 Scopul proiectului este realizarea unei aplicații practice, ușor de rulat local și pregătită pentru deploy în cloud. Tema aleasă este o aplicație de notițe deoarece permite demonstrarea clară a conceptelor importante din dezvoltarea web: modelarea datelor, expunerea unui API REST, validarea inputului, persistarea într-o bază de date relațională și consumarea API-ului dintr-o interfață modernă.
@@ -85,3 +87,35 @@ Structura modulară face codul ușor de înțeles și de prezentat. Separarea î
 Aplicația poate fi extinsă cu autentificare, utilizatori multipli, sortare avansată, filtrare după tag direct în interfață, markdown preview pentru conținutul notițelor și teste automate pentru backend și frontend.
 
 O altă îmbunătățire utilă ar fi adăugarea unui pipeline CI/CD care rulează testele și verificările de lint înainte de deploy. Pentru o aplicație folosită în producție, ar fi utilă și adăugarea unui sistem de logging mai detaliat și monitorizare a erorilor.
+
+## 14. Capturi De Ecran Ale Aplicației
+
+### 14.1 Ecran de autentificare
+
+Această pagină prezintă formularul de login prin care utilizatorul introduce email-ul și parola. După autentificare reușită, aplicația primește token-ul JWT și permite accesul la rutele protejate.
+
+![Ecran login](img/login.png)
+
+### 14.2 Ecran principal - lista de notițe
+
+Acesta este ecranul central al aplicației, unde utilizatorul vizualizează toate notițele proprii, poate căuta după titlu și poate folosi acțiunile rapide de vizualizare, editare, arhivare sau ștergere.
+
+![Ecran listă notițe](img/mainList.png)
+
+### 14.3 Ecran creare notiță
+
+Formularul de creare permite introducerea titlului, conținutului, tag-ului și statusurilor (pinned/arhivat). Datele sunt validate în frontend și trimise către backend prin endpoint-ul de create.
+
+![Ecran creare notiță](img/createElement.png)
+
+### 14.4 Ecran vizualizare detalii notiță
+
+Pagina de detalii afișează informațiile complete ale notiței selectate, inclusiv metadatele de creare și actualizare, și oferă acțiuni pentru editare sau ștergere.
+
+![Ecran detalii notiță](img/viewElement.png)
+
+### 14.5 Ecran editare notiță
+
+În această pagină, utilizatorul poate modifica valorile existente ale notiței. La salvare, aplicația trimite update-ul către backend și actualizează datele persistente din PostgreSQL.
+
+![Ecran editare notiță](img/editElement.png)
